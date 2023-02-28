@@ -26,7 +26,7 @@ if __name__ == "__main__":
     parser.add_argument('outfile',help='provide output file path',nargs='?')
     args = parser.parse_args()
     input_data = np.loadtxt(args.infile)
-    normalized = (raw_data - input_data.mean(axis=0)) / raw_data.std(axis=0)
+    normalized = (input_data - input_data.mean(axis=0)) / input_data.std(axis=0)
     processed = normalized
     root_dir = get_repository_root()
     os.makedirs(root_dir / "outputs", exist_ok=True)
