@@ -7,6 +7,10 @@ This module contains an entry point that:
 """
 import numpy as np
 from argparse import ArgumentParser
+try:
+    from src.util import get_repository_root
+except ImportError:
+    from util import get_repository_root
 
 if __name__ == "__main__":
     # Create your argument parser object here.
@@ -17,7 +21,7 @@ if __name__ == "__main__":
     # To test your program with arguments, run it from the command line
     # (see README.md for more details)
     import os
-    parser = ArgumentParser(description='This program applies a standard scale transform to the data in infile and writes it to outfile.')
+    parser = ArgumentParser()
     parser.add_argument('infile',help='provide input file path',nargs='?')
     parser.add_argument('outfile',help='provide output file path',nargs='?')
     args = parser.parse_args()
