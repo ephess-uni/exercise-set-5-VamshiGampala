@@ -13,7 +13,7 @@ def main(infile):
 if __name__ == "__main__":
 import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument('infile',help='provide file path',nargs='?')
+    parser.add_argument('infile')
     args = parser.parse_args()
     if args.infile:
         main(args.infile)
