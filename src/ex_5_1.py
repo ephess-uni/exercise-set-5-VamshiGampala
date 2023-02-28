@@ -12,7 +12,7 @@ def main(infile):
 
 if __name__ == "__main__":
 import argparse
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description='This program takes input from command prompt')
     parser.add_argument('infile')
     args = parser.parse_args()
     if args.infile:
